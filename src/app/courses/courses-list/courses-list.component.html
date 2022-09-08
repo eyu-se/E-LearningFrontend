@@ -6,95 +6,18 @@
 
 <br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
+
+  <div class="col" *ngFor="let course of courses">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Course title</h5>
+        <h5 class="card-title">{{course.name}}</h5>
         <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
+          {{course.description | slice:0:200}}
         </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
+        <a  class="btn btn-primary" routerLink="/courses/{{course.id}}/detail">Go To Detail</a>
 
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
 
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
-
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
-
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
-
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
-
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Course title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-        <a href="#" class="btn btn-primary">Go To Detail</a>
-
-      </div>
-    </div>
-  </div>
 </div>

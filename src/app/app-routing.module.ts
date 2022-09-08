@@ -1,3 +1,4 @@
+import { CoursesDetailComponent } from './courses/courses-detail/courses-detail.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoursesCreateComponent } from './courses/courses-create/courses-create.component';
@@ -8,6 +9,7 @@ const routes: Routes = [
   {path:  "", pathMatch:  "full",redirectTo:  "home"},
   {path: "home", component: HomeComponent},
   {path: "courses", component: CoursesListComponent},
+  {path: "courses/:courseId/detail", component: CoursesDetailComponent},
   {path: "courses/create", component: CoursesCreateComponent},
 
 ];

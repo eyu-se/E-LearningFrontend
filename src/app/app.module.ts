@@ -9,6 +9,8 @@ import { CoursesListComponent } from './courses/courses-list/courses-list.compon
 import { HomeComponent } from './home/home.component';
 import { CoursesCreateComponent } from './courses/courses-create/courses-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CoursesDetailComponent } from './courses/courses-detail/courses-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     CoursesListComponent,
     HomeComponent,
-    CoursesCreateComponent
+    CoursesCreateComponent,
+    CoursesDetailComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
