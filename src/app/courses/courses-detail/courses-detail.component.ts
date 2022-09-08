@@ -35,4 +35,17 @@ export class CoursesDetailComponent implements OnInit {
     );
   }
 
+  deleteCourse(){
+    this._coursesService.delete(this.course.id).subscribe(
+      (res) => {
+
+        console.log(res);
+        this._router.navigate(['/courses']);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+
 }

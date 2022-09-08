@@ -48,8 +48,8 @@ export abstract class HttpGenericService<T> {
       );
   }
 
-  update(resource: T) {
-    return this.httpClient.put(`${this.APIUrl}`,resource)
+  update(id: any, resource: T) {
+    return this.httpClient.put(`${this.APIUrl}/${id}`,resource)
       .pipe(
         catchError(this.handleError)
       );

@@ -11,6 +11,7 @@ import { CoursesCreateComponent } from './courses/courses-create/courses-create.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CoursesDetailComponent } from './courses/courses-detail/courses-detail.component';
+import { CoursesEditComponent } from './courses/courses-edit/courses-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoursesDetailComponent } from './courses/courses-detail/courses-detail.
     CoursesListComponent,
     HomeComponent,
     CoursesCreateComponent,
-    CoursesDetailComponent
+    CoursesDetailComponent,
+    CoursesEditComponent
   ],
   imports: [
     HttpClientModule,

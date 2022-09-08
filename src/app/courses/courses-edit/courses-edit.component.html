@@ -1,0 +1,90 @@
+<div class="container">
+
+  <form [formGroup]="form" (ngSubmit)="submit()" *ngIf="form != null">
+
+<div class="card">
+  <h2 class="card-header blog-post-title">Update Course
+    <span class="float-end">
+      <a  routerLink="/courses" class="btn btn-secondary">Back</a>
+    </span>
+  </h2>
+
+
+  <div class="card-body">
+    <article class="blog-post">
+
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+                formControlName="name"
+                id="name"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+                formControlName="description"
+                id="description"
+                type="text"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category:</label>
+
+
+              <select
+                class="form-control"
+                formControlName="courseCategoryId" >
+                <option disabled value="">Choose Category</option>
+                <option *ngFor="let category of courseCategories" [ngValue]="category.id">
+                  {{ category.name }}
+                </option>
+              </select>
+
+          <div *ngIf="f['courseCategoryId'].touched && f['courseCategoryId'].invalid" class="alert alert-danger">
+              <div *ngIf="f['courseCategoryId'].errors && f['courseCategoryId'].errors['required']">Category is required.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input
+            formControlName="author"
+            id="author"
+            type="text"
+            class="form-control">
+        <div *ngIf="f['author'].touched && f['author'].invalid" class="alert alert-danger">
+            <div *ngIf="f['author'].errors && f['author'].errors['required']">Author is required.</div>
+        </div>
+    </div>
+
+
+
+
+
+    </article>
+
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary float-end" type="submit" [disabled]="!form.valid">Update</button>
+
+  </div>
+
+
+
+</div>
+
+</form>
+
+</div>

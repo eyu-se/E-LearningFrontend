@@ -1,12 +1,14 @@
 
 <div class="card" *ngIf="course">
   <h2 class="card-header blog-post-title">{{course.name}}
+
     <span class="float-end">
-      <a><i class="fa fa-pencil-square-o"></i></a>
+      <a routerLink="/courses/{{course.id}}/edit"><i class="fa fa-pencil-square-o"></i></a>
       &nbsp;
-      <a><i class="fa fa-trash-o"></i></a>
+      <a (click)="deleteCourse()"><i class="fa fa-trash-o"></i></a>
 
     </span>
+    
   </h2>
 
   <div class="card-body">
